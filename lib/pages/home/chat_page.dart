@@ -21,82 +21,75 @@ class ChatPage extends StatelessWidget {
       );
     }
 
-    Widget content(){
+    Widget content() {
       return Expanded(
         child: Container(
           width: double.infinity,
           color: backgroundColor3,
           child: ListView(
-            padding: EdgeInsets.symmetric(
-              horizontal: defaultMargin
-              ),
-              children: [
-                ChatTile()
-              ],
+            padding: EdgeInsets.symmetric(horizontal: defaultMargin),
+            children: [ChatTile()],
           ),
         ),
       );
     }
 
-    Widget emptyChat(){
+    Widget emptyChat() {
       return Expanded(
-        child: Container(
-          width: double.infinity,
-          color: backgroundColor3,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                'assets/icon_headset.png',
-                width: 80,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                'Opss no message yet?',
-                style: primaryTextStyle.copyWith(
-                  fontSize: 16,
-                  fontWeight: medium
-                ),
-              ),
-              SizedBox(
-                height: 12,
-              ),
-              Text(
-                'You have never done a transaction',
-                style: secondaryTextStyle,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Container(
-                height: 44,
-                child: TextButton(
-                  onPressed: (){},
-                  style: TextButton.styleFrom(
+          child: Container(
+        width: double.infinity,
+        color: backgroundColor3,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/icon__empty_cart.png',
+              width: 80,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              'Opss belum ada transaksi?',
+              style:
+                  primaryTextStyle.copyWith(fontSize: 16, fontWeight: medium),
+            ),
+            SizedBox(
+              height: 12,
+            ),
+            Text(
+              'Anda belum pernah melakukan transaksi',
+              style: secondaryTextStyle,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              height: 44,
+              child: TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/home');
+                },
+                style: TextButton.styleFrom(
                     padding: EdgeInsets.symmetric(
                       horizontal: 24,
                       vertical: 10,
                     ),
                     backgroundColor: primaryColor,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)
-                    )
+                        borderRadius: BorderRadius.circular(12))),
+                child: Text(
+                  'Telusuri Toko',
+                  style: primaryTextStyle.copyWith(
+                    fontSize: 16,
+                    fontWeight: medium,
                   ),
-                  child: Text(
-                    'Explore Store',
-                    style: primaryTextStyle.copyWith(
-                      fontSize: 16,
-                      fontWeight: medium,
-                    ),
-                  ),
-                  ),
-              )
-            ],
-          ),
-        )
-      );
+                ),
+              ),
+            )
+          ],
+        ),
+      ));
     }
 
     return Column(

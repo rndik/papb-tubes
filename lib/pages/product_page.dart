@@ -11,21 +11,21 @@ class ProductPage extends StatefulWidget {
 
 class _ProductPageState extends State<ProductPage> {
   List images = [
-    'assets/image_shoes.png',
-    'assets/image_shoes.png',
-    'assets/image_shoes.png',
+    'assets/image_steel2.png',
+    'assets/image_steel2.png',
+    'assets/image_steel2.png',
   ];
 
-  List familiarShoes = [
-    'assets/image_shoes.png',
-    'assets/image_shoes.png',
-    'assets/image_shoes.png',
-    'assets/image_shoes.png',
-    'assets/image_shoes.png',
-    'assets/image_shoes.png',
-    'assets/image_shoes.png',
-    'assets/image_shoes.png',
-    'assets/image_shoes.png',
+  List familiarSteel = [
+    'assets/image_steel2.png',
+    'assets/image_steel2.png',
+    'assets/image_steel2.png',
+    'assets/image_steel2.png',
+    'assets/image_steel2.png',
+    'assets/image_steel2.png',
+    'assets/image_steel2.png',
+    'assets/image_steel2.png',
+    'assets/image_steel2.png',
   ];
 
   int currentIndex = 0;
@@ -46,7 +46,7 @@ class _ProductPageState extends State<ProductPage> {
       );
     }
 
-    Widget familiarShoesCard(String imageUrl) {
+    Widget familiarSteelCard(String imageUrl) {
       return Container(
         width: 54,
         height: 54,
@@ -144,14 +144,14 @@ class _ProductPageState extends State<ProductPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'TERREX URBAN LOW',
+                          'PIPA GALVANIS',
                           style: primaryTextStyle.copyWith(
                             fontSize: 18,
                             fontWeight: semiBold,
                           ),
                         ),
                         Text(
-                          'Hiking',
+                          'Pipa',
                           style: secondaryTextStyle.copyWith(
                             fontSize: 12,
                           ),
@@ -181,11 +181,11 @@ class _ProductPageState extends State<ProductPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Price starts from',
+                    'Harga mulai dari',
                     style: primaryTextStyle,
                   ),
                   Text(
-                    '\$143,98',
+                    'Rp.135.000',
                     style: priceTextStyle.copyWith(
                       fontSize: 17,
                       fontWeight: semiBold,
@@ -207,7 +207,7 @@ class _ProductPageState extends State<ProductPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Description',
+                    'Deskripsi',
                     style: primaryTextStyle.copyWith(
                       fontWeight: medium,
                     ),
@@ -216,7 +216,7 @@ class _ProductPageState extends State<ProductPage> {
                     height: 12,
                   ),
                   Text(
-                    'Unpaved trails and mixed surfaces are easy when you have the traction and support you need. Casual enough for the daily commute.',
+                    'Pipa Galvanis merupakan pipa yang telah dilapisi seng sehingga penggunaannya dapat di aplikasi ke rumah maupun hotel karena tergolong aman dan juga tidak mudah berkarat.',
                     style: subtitleTextStyle.copyWith(
                       fontWeight: light,
                     ),
@@ -226,7 +226,7 @@ class _ProductPageState extends State<ProductPage> {
               ),
             ),
 
-            //FAMILIARSHOES
+            //familiarSteel
             Container(
               width: double.infinity,
               margin: EdgeInsets.only(
@@ -240,7 +240,7 @@ class _ProductPageState extends State<ProductPage> {
                       horizontal: defaultMargin,
                     ),
                     child: Text(
-                      'Familiar Shoes',
+                      'Produk Lain',
                       style: primaryTextStyle.copyWith(
                         fontWeight: medium,
                       ),
@@ -252,13 +252,13 @@ class _ProductPageState extends State<ProductPage> {
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
-                      children: familiarShoes.map((image) {
+                      children: familiarSteel.map((image) {
                         index++;
                         return Container(
                           margin: EdgeInsets.only(
                             left: index == 0 ? defaultMargin : 0
                           ),
-                          child: familiarShoesCard(image)
+                          child: familiarSteelCard(image)
                         );
                       }).toList(),
                     ),
@@ -278,16 +278,6 @@ class _ProductPageState extends State<ProductPage> {
               ),
               child: Row(
                 children: [
-                  Container(
-                    width: 54,
-                    height: 54,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/button_chat.png'
-                        ))
-                    ),
-                  ),
                   SizedBox(
                     width: 16,
                   ),
@@ -303,7 +293,7 @@ class _ProductPageState extends State<ProductPage> {
                           backgroundColor: primaryColor
                         ),
                         child: Text(
-                          'Add to Cart',
+                          'Tambah ke Keranjang',
                           style: primaryTextStyle.copyWith(
                             fontSize: 16,
                             fontWeight: semiBold

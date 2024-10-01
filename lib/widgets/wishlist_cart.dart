@@ -16,7 +16,7 @@ class WishlistCart extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(12),
             child: Image.asset(
-              'assets/image_shoes.png',
+              'assets/image_steel.png',
               width: 60,
             ),
           ),
@@ -28,13 +28,13 @@ class WishlistCart extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
               Text(
-                'Terrex Urban Low',
+                'Pipa Galvanis',
                 style: primaryTextStyle.copyWith(
                   fontWeight: semiBold,
                 ),
               ),
               Text(
-                '\$143,98',
+                'Rp.135.000',
                 style: priceTextStyle,
               )
             ],

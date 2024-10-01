@@ -66,8 +66,8 @@ class _MainPageState extends State<MainPage> {
                     bottom:10,
                     ),
                     child: Image.asset(
-                      'assets/icon_chat.png',
-                      width: 20,
+                      'assets/icon_myorder.png',
+                      width: 26,
                       color: currentIndex == 1 ? primaryColor : Color(0xff808191),
                     ),
                   ),
