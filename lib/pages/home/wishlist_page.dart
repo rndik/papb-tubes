@@ -10,7 +10,7 @@ class WishlistPage extends StatelessWidget {
         backgroundColor: backgroundColor1,
         centerTitle: true,
         title: Text(
-          'Favorite Shoes',
+          'Wishlist',
           style: primaryTextStyle.copyWith(
             fontSize: 18,
             fontWeight: medium,
@@ -37,7 +37,7 @@ class WishlistPage extends StatelessWidget {
               height: 20,
             ),
             Text(
-              ' You don\'t have dream shoes?',
+              'Anda tidak mempunyai barang yang anda suka?',
               style:
                   primaryTextStyle.copyWith(fontSize: 16, fontWeight: medium),
             ),
@@ -45,7 +45,7 @@ class WishlistPage extends StatelessWidget {
               height: 12,
             ),
             Text(
-              'Let\'s find your favorite shoes',
+              'Ayo cari barang yang anda sukai',
               style: secondaryTextStyle,
             ),
             SizedBox(
@@ -54,7 +54,10 @@ class WishlistPage extends StatelessWidget {
             Container(
               height: 44,
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/home', (route) => false);
+                },
                 style: TextButton.styleFrom(
                     padding: EdgeInsets.symmetric(
                       horizontal: 24,
@@ -64,7 +67,7 @@ class WishlistPage extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12))),
                 child: Text(
-                  'Explore Store',
+                  'Telusuri Toko',
                   style: primaryTextStyle.copyWith(
                     fontSize: 16,
                     fontWeight: medium,
@@ -79,26 +82,21 @@ class WishlistPage extends StatelessWidget {
 
     Widget content() {
       return Expanded(
-        child: Container(
-          color: backgroundColor3,
-          child: ListView(
-            padding: EdgeInsets.symmetric(
-              horizontal: defaultMargin
-            ),
-            children: [
-              WishlistCart(),
-              WishlistCart(),
-              WishlistCart(),
-            ],
-          ),
+          child: Container(
+        color: backgroundColor3,
+        child: ListView(
+          padding: EdgeInsets.symmetric(horizontal: defaultMargin),
+          children: [
+            WishlistCart(),
+            WishlistCart(),
+            WishlistCart(),
+          ],
+        ),
       ));
     }
 
     return Column(
-      children: [
-        header(),
-        content(),
-      ],
+      children: [header(), emptyWishlist()],
     );
   }
 }

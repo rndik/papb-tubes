@@ -11,7 +11,7 @@ class EditProfilePage extends StatelessWidget {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(Icons.close)),
+            icon: Icon(Icons.close,color: primaryColor,)),
         backgroundColor: backgroundColor1, // Contoh properti tambahan
         title: Text(
           'Edit Profile',

@@ -69,7 +69,7 @@ class HomePage extends StatelessWidget {
                   'Semua Besi',
                   style: primaryTextStyle.copyWith(
                     fontSize: 13,
-                    fontWeight: medium,
+                    fontWeight: bold,
                   ),
                 ),
               ),
@@ -88,7 +88,7 @@ class HomePage extends StatelessWidget {
                   'Pipa',
                   style: subtitleTextStyle.copyWith(
                     fontSize: 13,
-                    fontWeight: medium,
+                    fontWeight: bold,
                   ),
                 ),
               ),
@@ -107,7 +107,7 @@ class HomePage extends StatelessWidget {
                   'Besi Holo',
                   style: subtitleTextStyle.copyWith(
                     fontSize: 13,
-                    fontWeight: medium,
+                    fontWeight: bold,
                   ),
                 ),
               ),
@@ -126,7 +126,7 @@ class HomePage extends StatelessWidget {
                   'Plat',
                   style: subtitleTextStyle.copyWith(
                     fontSize: 13,
-                    fontWeight: medium,
+                    fontWeight: bold,
                   ),
                 ),
               ),
@@ -145,7 +145,7 @@ class HomePage extends StatelessWidget {
                   'Baja Ringan',
                   style: subtitleTextStyle.copyWith(
                     fontSize: 13,
-                    fontWeight: medium,
+                    fontWeight: bold,
                   ),
                 ),
               ),

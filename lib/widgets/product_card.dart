@@ -10,26 +10,23 @@ class ProductCard extends StatelessWidget {
       },
       child: Container(
         width: 215,
-        height: 278,
+        height: 250,
         margin: EdgeInsets.only(right: defaultMargin),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: Color(0xffECEDEF),
+          color: backgroundColor4,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
-              height: 30,
-            ),
             Image.asset(
-              'assets/image_steel2.png',
+              'assets/image_steel.png',
               width: 215,
               height: 150,
               fit: BoxFit.cover,
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 20),
+              margin: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -42,7 +39,7 @@ class ProductCard extends StatelessWidget {
                   ),
                   Text(
                     'PIPA GALVANIS',
-                    style: blackTextStyle.copyWith(
+                    style: primaryTextStyle.copyWith(
                       fontSize: 18,
                       fontWeight: semiBold,
                     ),

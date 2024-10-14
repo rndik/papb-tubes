@@ -36,6 +36,7 @@ class ProductTile extends StatelessWidget {
                   'Pipa',
                   style: secondaryTextStyle.copyWith(
                     fontSize: 12,
+                    fontWeight: bold,
                   ),
                 ),
                 SizedBox(
