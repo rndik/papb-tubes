@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/pages/cart_page.dart';
+import 'package:flutter_application_2/pages/checkout_page.dart';
+import 'package:flutter_application_2/pages/checkout_succes_page.dart';
 import 'package:flutter_application_2/pages/detail_chat_page.dart';
 import 'package:flutter_application_2/pages/edit_profile_page.dart';
+import 'package:flutter_application_2/pages/home/chat_page.dart';
 import 'package:flutter_application_2/pages/home/main_page.dart';
 import 'package:flutter_application_2/pages/product_page.dart';
 import 'package:flutter_application_2/pages/sign_in_page.dart';
@@ -25,6 +29,10 @@ class MyApp extends StatelessWidget {
         '/detail-chat': (context) => DetailChatPage(),
         '/edit-profile': (context) => EditProfilePage(),
         '/product': (context) => ProductPage(),
+        '/cart': (context) => CartPage(),
+        '/checkout': (context) => CheckoutPage(),
+        '/checkout-succes': (context) => CheckoutSuccesPage(),
+        '/myorder': (context) => OrderPage()
       },
     );
   }

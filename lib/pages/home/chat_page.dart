@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/theme.dart';
 import 'package:flutter_application_2/widgets/chat_tile.dart';
 
-class ChatPage extends StatelessWidget {
+class OrderPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget header() {
@@ -10,7 +10,7 @@ class ChatPage extends StatelessWidget {
         backgroundColor: backgroundColor1,
         centerTitle: true,
         title: Text(
-          'Pesanan Saya',
+          'Pesanan Anda',
           style: primaryTextStyle.copyWith(
             fontSize: 18,
             fontWeight: medium,
@@ -34,7 +34,7 @@ class ChatPage extends StatelessWidget {
       );
     }
 
-    Widget emptyChat() {
+    Widget emptyOrder() {
       return Expanded(
           child: Container(
         width: double.infinity,
@@ -95,7 +95,7 @@ class ChatPage extends StatelessWidget {
     return Column(
       children: [
         header(),
-        emptyChat(),
+        emptyOrder(),
       ],
     );
   }
