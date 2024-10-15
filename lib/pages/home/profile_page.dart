@@ -107,7 +107,6 @@ class ProfilePage extends StatelessWidget {
                     Navigator.pushNamed(context, '/edit-profile');
                   },
                   child: menuItem('Edit Profile')),
-              menuItem('Your Orders'),
               SizedBox(
                 height: 30,
               ),

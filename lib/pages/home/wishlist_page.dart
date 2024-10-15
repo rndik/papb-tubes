@@ -10,7 +10,7 @@ class WishlistPage extends StatelessWidget {
         backgroundColor: backgroundColor1,
         centerTitle: true,
         title: Text(
-          'Favorite Shoes',
+          'Wishlist',
           style: primaryTextStyle.copyWith(
             fontSize: 18,
             fontWeight: medium,

@@ -10,7 +10,7 @@ class ChatPage extends StatelessWidget {
         backgroundColor: backgroundColor1,
         centerTitle: true,
         title: Text(
-          'Message Support',
+          'Pesanan Saya',
           style: primaryTextStyle.copyWith(
             fontSize: 18,
             fontWeight: medium,

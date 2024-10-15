@@ -17,15 +17,15 @@ class _ProductPageState extends State<ProductPage> {
   ];
 
   List familiarSteel = [
-    'assets/image_steel2.png',
-    'assets/image_steel2.png',
-    'assets/image_steel2.png',
-    'assets/image_steel2.png',
-    'assets/image_steel2.png',
-    'assets/image_steel2.png',
-    'assets/image_steel2.png',
-    'assets/image_steel2.png',
-    'assets/image_steel2.png',
+    'assets/image_steel.png',
+    'assets/image_steel.png',
+    'assets/image_steel.png',
+    'assets/image_steel.png',
+    'assets/image_steel.png',
+    'assets/image_steel.png',
+    'assets/image_steel.png',
+    'assets/image_steel.png',
+    'assets/image_steel.png',
   ];
 
   int currentIndex = 0;
