@@ -11,7 +11,7 @@ class SignUpPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Sign Up',
+              'Register',
               style: primaryTextStyle.copyWith(
                 fontSize: 24,
                 fontWeight: semiBold,
@@ -36,7 +36,7 @@ class SignUpPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Full Name',
+              'Nama Lengkap',
               style: primaryTextStyle.copyWith(
                 fontSize: 16,
                 fontWeight: medium,
@@ -65,7 +65,7 @@ class SignUpPage extends StatelessWidget {
                         child: TextFormField(
                       style: primaryTextStyle,
                       decoration: InputDecoration.collapsed(
-                        hintText: 'Your Full Name',
+                        hintText: 'Nama Lengkap Anda',
                         hintStyle: subtitleTextStyle,
                       ),
                     )),
@@ -114,7 +114,7 @@ class SignUpPage extends StatelessWidget {
                         child: TextFormField(
                       style: primaryTextStyle,
                       decoration: InputDecoration.collapsed(
-                        hintText: 'Your Username',
+                        hintText: 'Username Anda',
                         hintStyle: subtitleTextStyle,
                       ),
                     )),
@@ -163,7 +163,7 @@ class SignUpPage extends StatelessWidget {
                         child: TextFormField(
                       style: primaryTextStyle,
                       decoration: InputDecoration.collapsed(
-                        hintText: 'Your Email Address',
+                        hintText: 'Email Anda',
                         hintStyle: subtitleTextStyle,
                       ),
                     )),
@@ -213,7 +213,7 @@ class SignUpPage extends StatelessWidget {
                       style: primaryTextStyle,
                       obscureText: true,
                       decoration: InputDecoration.collapsed(
-                        hintText: 'Your Password',
+                        hintText: 'Password Anda',
                         hintStyle: subtitleTextStyle,
                       ),
                     )),
@@ -241,7 +241,7 @@ class SignUpPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
               )),
           child: Text(
-            'Sign Up',
+            'Register',
             style: primaryTextStyle.copyWith(
               fontSize: 16,
               fontWeight: medium,
@@ -258,7 +258,7 @@ class SignUpPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Already have an account? ',
+              'Sudah mempunyai akun? ',
               style: subtitleTextStyle.copyWith(
                 fontSize: 12,
               ),
@@ -268,7 +268,7 @@ class SignUpPage extends StatelessWidget {
                 Navigator.pushNamed(context, '/sign-in');
               },
               child: Text(
-                'Sign In',
+                'Login',
                 style:
                     purpleTextStyle.copyWith(fontSize: 12, fontWeight: bold),
               ),

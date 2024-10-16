@@ -13,8 +13,14 @@ class CartPage extends StatelessWidget {
           'Keranjang Anda',
         ),
         elevation: 0,
-      );
-    }
+        leading: IconButton(
+          icon: Icon(Icons.chevron_left),
+          onPressed: () {
+        Navigator.pop(context); // Ini akan mengembalikan pengguna ke halaman sebelumnya
+      },
+    ),
+  );
+}
 
     Widget emptyCart() {
       return Center(

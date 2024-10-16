@@ -21,7 +21,7 @@ class SignInPage extends StatelessWidget {
               height: 2,
             ),
             Text(
-              'Sign In to Continue',
+              'Login untuk melanjutkan',
               style: subtitleTextStyle,
             )
           ],
@@ -65,7 +65,7 @@ class SignInPage extends StatelessWidget {
                         child: TextFormField(
                       style: primaryTextStyle,
                       decoration: InputDecoration.collapsed(
-                        hintText: 'Your Email Address',
+                        hintText: 'Email Address',
                         hintStyle: subtitleTextStyle,
                       ),
                     )),
@@ -115,7 +115,7 @@ class SignInPage extends StatelessWidget {
                       style: primaryTextStyle,
                       obscureText: true,
                       decoration: InputDecoration.collapsed(
-                        hintText: 'Your Password',
+                        hintText: 'Password',
                         hintStyle: subtitleTextStyle,
                       ),
                     )),
@@ -143,12 +143,32 @@ class SignInPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
               )),
           child: Text(
-            'Sign In',
+            'Login',
             style: primaryTextStyle.copyWith(
               fontSize: 16,
               fontWeight: medium,
             ),
           ),
+        ),
+      );
+    }
+
+    Widget forgotPassword() {
+      return Container(
+        margin: EdgeInsets.only(top: 20),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/forgot-password');
+              },
+              child: Text(
+                'Lupa Password?',
+                style: purpleTextStyle.copyWith(fontSize: 12, fontWeight: bold),
+              ),
+            )
+          ],
         ),
       );
     }
@@ -160,7 +180,7 @@ class SignInPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Don\'t have an account? ',
+              'Tidak mempunyai akun? ',
               style: subtitleTextStyle.copyWith(
                 fontSize: 12,
               ),
@@ -170,9 +190,8 @@ class SignInPage extends StatelessWidget {
                 Navigator.pushNamed(context, '/sign-up');
               },
               child: Text(
-                'Sign Up',
-                style:
-                    purpleTextStyle.copyWith(fontSize: 12, fontWeight: bold),
+                'Register',
+                style: purpleTextStyle.copyWith(fontSize: 12, fontWeight: bold),
               ),
             )
           ],
@@ -195,6 +214,7 @@ class SignInPage extends StatelessWidget {
               emailInput(),
               passwordInput(),
               signInButton(),
+              forgotPassword(),
               Spacer(),
               footer(),
             ],

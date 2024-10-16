@@ -59,7 +59,9 @@ class OrderPage extends StatelessWidget {
             ),
             Text(
               'Anda belum pernah melakukan transaksi',
-              style: secondaryTextStyle,
+              style: secondaryTextStyle.copyWith(
+                fontSize: 12
+              ),
             ),
             SizedBox(
               height: 20,

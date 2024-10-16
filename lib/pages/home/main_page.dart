@@ -49,7 +49,7 @@ class _MainPageState extends State<MainPage> {
               items: [
                 BottomNavigationBarItem(
                   icon: Container(
-                    margin: EdgeInsets.only(
+                    margin: const EdgeInsets.only(
                       top: 20,
                       bottom: 10,
                     ),
@@ -64,7 +64,7 @@ class _MainPageState extends State<MainPage> {
                 ),
                 BottomNavigationBarItem(
                   icon: Container(
-                    margin: EdgeInsets.only(
+                    margin: const EdgeInsets.only(
                       top: 20,
                       bottom: 10,
                     ),
@@ -79,7 +79,7 @@ class _MainPageState extends State<MainPage> {
                 ),
                 BottomNavigationBarItem(
                   icon: Container(
-                    margin: EdgeInsets.only(
+                    margin: const EdgeInsets.only(
                       top: 20,
                       bottom: 10,
                     ),

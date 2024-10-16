@@ -108,12 +108,6 @@ class ProfilePage extends StatelessWidget {
                   },
                   child: menuItem('Edit Profile')
                   ),
-              GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, '/myorder');
-                  },
-                  child: menuItem('Pesanan Anda')
-                  ),
               SizedBox(
                 height: 30,
               ),
@@ -122,8 +116,6 @@ class ProfilePage extends StatelessWidget {
                 style: primaryTextStyle.copyWith(
                     fontSize: 16, fontWeight: semiBold),
               ),
-              menuItem('Privacy & Policy'),
-              menuItem('Term of Service'),
               menuItem('Rate App'),
             ],
           ),

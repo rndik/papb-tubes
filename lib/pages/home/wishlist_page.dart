@@ -96,7 +96,7 @@ class WishlistPage extends StatelessWidget {
     }
 
     return Column(
-      children: [header(), emptyWishlist()],
+      children: [header(), content()],
     );
   }
 }

@@ -146,45 +146,47 @@ class _ProductPageState extends State<ProductPage> {
                   onTap: () {
                     Navigator.pop(context);
                   },
-                  child: Icon(Icons.chevron_left),
+                  child: Icon(Icons.chevron_left,color: blackColor,),
                 ),
                 GestureDetector(
                     onTap: () {
                       Navigator.pushNamed(context, '/cart');
                     },
-                    child: Icon(Icons.shopping_bag)),
+                    child: Icon(Icons.shopping_bag,color: blackColor,)),
               ],
             ),
           ),
-          CarouselSlider(
-            items: images
-                .map(
-                  (image) => Container(
-                    margin: const EdgeInsets.symmetric(
-                        horizontal: 9.0), // Jarak antar gambar
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(
-                          10.0), // Memberikan radius sudut
-                      child: Image.asset(
-                        image,
-                        width: MediaQuery.of(context).size.width *
-                            0.7, // Mengatur ukuran gambar
-                        height: 310,
-                        fit: BoxFit.cover,
+          Container(
+            child: CarouselSlider(
+              items: images
+                  .map(
+                    (image) => Container(
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 9.0), // Jarak antar gambar
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(
+                            10.0), // Memberikan radius sudut
+                        child: Image.asset(
+                          image,
+                          width: MediaQuery.of(context).size.width *
+                              0.7, // Mengatur ukuran gambar
+                          height: 310,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
-                  ),
-                )
-                .toList(),
-            options: CarouselOptions(
-              initialPage: 0,
-              onPageChanged: (index, reason) {
-                setState(() {
-                  currentIndex = index;
-                });
-              },
-              enlargeCenterPage: true, // Membuat gambar di tengah lebih besar
-              enableInfiniteScroll: true, // Untuk infinite scroll (opsional)
+                  )
+                  .toList(),
+              options: CarouselOptions(
+                initialPage: 0,
+                onPageChanged: (index, reason) {
+                  setState(() {
+                    currentIndex = index;
+                  });
+                },
+                enlargeCenterPage: true, // Membuat gambar di tengah lebih besar
+                enableInfiniteScroll: true, // Untuk infinite scroll (opsional)
+              ),
             ),
           ),
           SizedBox(
