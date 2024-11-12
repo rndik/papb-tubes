@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/models/user_model.dart';
+import 'package:flutter_application_2/providers/auth_provider.dart';
 import 'package:flutter_application_2/theme.dart';
 import 'package:flutter_application_2/widgets/product_card.dart';
 import 'package:flutter_application_2/widgets/product_tile.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    AuthProvider authProvider = Provider.of<AuthProvider>(context);
+    UserModel user = authProvider.user;
+
     Widget header() {
       return Container(
         margin: EdgeInsets.only(
@@ -17,27 +23,31 @@ class HomePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Hallo, Rendi',
+                    'Hallo, ${user.name}',
                     style: primaryTextStyle.copyWith(
                         fontSize: 24, fontWeight: semiBold),
                   ),
                   Text(
-                    "@rendisisir",
+                    "@${user.username}",
                     style: subtitleTextStyle.copyWith(fontSize: 16),
                   ),
                 ],
               ),
             ),
             Container(
-              width: 54,
-              height: 54,
-              decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                      image: AssetImage(
-                    'assets/image_profile.png',
-                  ))),
-            ),
+  width: 54,
+  height: 54,
+  decoration: BoxDecoration(
+    shape: BoxShape.circle,
+    image: DecorationImage(
+      image: user.profilePhotoUrl != null && user.profilePhotoUrl!.isNotEmpty
+          ? NetworkImage(user.profilePhotoUrl!)
+          : AssetImage('assets/images/placeholder.png'), // Ganti dengan path placeholder Anda
+      fit: BoxFit.cover, // Pastikan gambar menutupi lingkaran dengan baik
+    ),
+  ),
+),
+
           ],
         ),
       );
