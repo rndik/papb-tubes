@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/theme.dart';
 
 class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     Widget header() {
@@ -22,7 +24,7 @@ class ProfilePage extends StatelessWidget {
                     width: 64,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 16,
                 ),
                 Expanded(
@@ -64,7 +66,7 @@ class ProfilePage extends StatelessWidget {
 
     Widget menuItem(String text) {
       return Container(
-        margin: EdgeInsets.only(top: 16),
+        margin: const EdgeInsets.only(top: 16),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -94,7 +96,7 @@ class ProfilePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Text(
@@ -108,7 +110,7 @@ class ProfilePage extends StatelessWidget {
                   },
                   child: menuItem('Edit Profile')
                   ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Text(

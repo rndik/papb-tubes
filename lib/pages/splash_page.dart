@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/theme.dart';
 
 class SplashPage extends StatefulWidget {
+  const SplashPage({super.key});
+
   @override
   State<SplashPage> createState() => _SplashPageState();
 }
@@ -12,7 +14,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     Timer(
-      Duration(seconds: 3),
+      const Duration(seconds: 3),
       () => Navigator.pushNamed(context, '/sign-in'),
     );
 
@@ -27,7 +29,7 @@ class _SplashPageState extends State<SplashPage> {
         child: Container(
           width: 200,
           height: 220,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage('assets/image_splash2.png'))),
         ),

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/theme.dart';
 
 class ProductTile extends StatelessWidget {
+  const ProductTile({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -25,7 +27,7 @@ class ProductTile extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 12,
             ),
             Expanded(
@@ -39,7 +41,7 @@ class ProductTile extends StatelessWidget {
                     fontWeight: bold,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 6,
                 ),
                 Text(
@@ -49,7 +51,7 @@ class ProductTile extends StatelessWidget {
                     fontWeight: semiBold,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 6,
                 ),
                 Text(

@@ -6,6 +6,8 @@ import 'package:flutter_application_2/pages/home/wishlist_page.dart';
 import 'package:flutter_application_2/theme.dart';
 
 class MainPage extends StatefulWidget {
+  const MainPage({super.key});
+
   @override
   State<MainPage> createState() => _MainPageState();
 }
@@ -21,7 +23,7 @@ class _MainPageState extends State<MainPage> {
           Navigator.pushNamed(context, '/cart');
         },
         backgroundColor: secondaryColor,
-        shape: CircleBorder(),
+        shape: const CircleBorder(),
         child: Image.asset(
           'assets/icon_cart.png',
           width: 20,
@@ -31,9 +33,9 @@ class _MainPageState extends State<MainPage> {
 
     Widget customBottomNav() {
       return ClipRRect(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(30)),
         child: BottomAppBar(
-          shape: CircularNotchedRectangle(),
+          shape: const CircularNotchedRectangle(),
           notchMargin: 10,
           clipBehavior: Clip.antiAlias,
           child: BottomNavigationBar(
@@ -57,7 +59,7 @@ class _MainPageState extends State<MainPage> {
                       'assets/icon_home.png',
                       width: 21,
                       color:
-                          currentIndex == 0 ? primaryColor : Color(0xff808191),
+                          currentIndex == 0 ? primaryColor : const Color(0xff808191),
                     ),
                   ),
                   label: '',
@@ -72,7 +74,7 @@ class _MainPageState extends State<MainPage> {
                       'assets/icon_myorder.png',
                       width: 26,
                       color:
-                          currentIndex == 1 ? primaryColor : Color(0xff808191),
+                          currentIndex == 1 ? primaryColor : const Color(0xff808191),
                     ),
                   ),
                   label: '',
@@ -87,19 +89,19 @@ class _MainPageState extends State<MainPage> {
                       'assets/icon_wishlist.png',
                       width: 20,
                       color:
-                          currentIndex == 2 ? primaryColor : Color(0xff808191),
+                          currentIndex == 2 ? primaryColor : const Color(0xff808191),
                     ),
                   ),
                   label: '',
                 ),
                 BottomNavigationBarItem(
                   icon: Container(
-                    margin: EdgeInsets.only(top: 20, bottom: 10),
+                    margin: const EdgeInsets.only(top: 20, bottom: 10),
                     child: Image.asset(
                       'assets/icon_profile.png',
                       width: 18,
                       color:
-                          currentIndex == 3 ? primaryColor : Color(0xff808191),
+                          currentIndex == 3 ? primaryColor : const Color(0xff808191),
                     ),
                   ),
                   label: '',

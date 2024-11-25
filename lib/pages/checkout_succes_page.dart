@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/theme.dart';
 
 class CheckoutSuccesPage extends StatelessWidget {
+  const CheckoutSuccesPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     PreferredSizeWidget header() {
@@ -9,7 +11,7 @@ class CheckoutSuccesPage extends StatelessWidget {
         backgroundColor: backgroundColor1,
         elevation: 0,
         centerTitle: true,
-        title: Text('Checkout Berhasil'),
+        title: const Text('Checkout Berhasil'),
       );
     }
 
@@ -22,7 +24,7 @@ class CheckoutSuccesPage extends StatelessWidget {
               'assets/icon__empty_cart.png',
               width: 80,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Text(
@@ -30,7 +32,7 @@ class CheckoutSuccesPage extends StatelessWidget {
               style:
                   primaryTextStyle.copyWith(fontSize: 16, fontWeight: medium),
             ),
-            SizedBox(
+            const SizedBox(
               height: 12,
             ),
             Text(

@@ -3,6 +3,8 @@ import 'package:flutter_application_2/theme.dart';
 import 'package:flutter_application_2/widgets/chat_tile.dart';
 
 class OrderPage extends StatelessWidget {
+  const OrderPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     Widget header() {
@@ -46,7 +48,7 @@ class OrderPage extends StatelessWidget {
               'assets/icon__empty_cart.png',
               width: 80,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Text(
@@ -54,7 +56,7 @@ class OrderPage extends StatelessWidget {
               style:
                   primaryTextStyle.copyWith(fontSize: 16, fontWeight: medium),
             ),
-            SizedBox(
+            const SizedBox(
               height: 12,
             ),
             Text(
@@ -63,17 +65,17 @@ class OrderPage extends StatelessWidget {
                 fontSize: 12
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Container(
+            SizedBox(
               height: 44,
               child: TextButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/home');
                 },
                 style: TextButton.styleFrom(
-                    padding: EdgeInsets.symmetric(
+                    padding: const EdgeInsets.symmetric(
                       horizontal: 24,
                       vertical: 10,
                     ),

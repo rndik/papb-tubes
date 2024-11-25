@@ -3,6 +3,8 @@ import 'package:flutter_application_2/theme.dart';
 import 'package:flutter_application_2/widgets/chat_bubble.dart';
 
 class DetailChatPage extends StatelessWidget {
+  const DetailChatPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     // Fungsi header yang mengembalikan AppBar langsung
@@ -17,7 +19,7 @@ class DetailChatPage extends StatelessWidget {
               'assets/image_shop_online.png',
               width: 50,
             ),
-            SizedBox(
+            const SizedBox(
               width: 12,
             ),
             Column(
@@ -44,8 +46,8 @@ class DetailChatPage extends StatelessWidget {
       return Container(
         width: 225,
         height: 74,
-        margin: EdgeInsets.only(bottom: 20),
-        padding: EdgeInsets.all(10),
+        margin: const EdgeInsets.only(bottom: 20),
+        padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
             color: backgroundColor5,
             borderRadius: BorderRadius.circular(12),
@@ -62,7 +64,7 @@ class DetailChatPage extends StatelessWidget {
                 width: 54,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             Expanded(
@@ -75,7 +77,7 @@ class DetailChatPage extends StatelessWidget {
                     style: primaryTextStyle,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 2,
                   ),
                   Text(
@@ -98,7 +100,7 @@ class DetailChatPage extends StatelessWidget {
 
     Widget chatInput() {
       return Container(
-        margin: EdgeInsets.all(20),
+        margin: const EdgeInsets.all(20),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -109,7 +111,7 @@ class DetailChatPage extends StatelessWidget {
                 Expanded(
                   child: Container(
                     height: 45,
-                    padding: EdgeInsets.symmetric(
+                    padding: const EdgeInsets.symmetric(
                       horizontal: 16,
                     ),
                     decoration: BoxDecoration(
@@ -126,7 +128,7 @@ class DetailChatPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 Image.asset(

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/theme.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
+  const ForgotPasswordPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     PreferredSizeWidget header() {
@@ -32,7 +34,7 @@ class ForgotPasswordPage extends StatelessWidget {
                 fontWeight: semiBold,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 2,
             ),
             Text(
@@ -47,7 +49,7 @@ class ForgotPasswordPage extends StatelessWidget {
 
     Widget emailInput() {
       return Container(
-        margin: EdgeInsets.only(top: 20),
+        margin: const EdgeInsets.only(top: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -58,12 +60,12 @@ class ForgotPasswordPage extends StatelessWidget {
                 fontWeight: medium,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 12,
             ),
             Container(
               height: 50,
-              padding: EdgeInsets.symmetric(
+              padding: const EdgeInsets.symmetric(
                 horizontal: 16,
               ),
               decoration: BoxDecoration(
@@ -74,7 +76,7 @@ class ForgotPasswordPage extends StatelessWidget {
                 child: Row(
                   children: [
                     Image.asset('assets/icon_email.png', width: 17),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Expanded(
@@ -98,7 +100,7 @@ class ForgotPasswordPage extends StatelessWidget {
       return Container(
         height: 50,
         width: double.infinity,
-        margin: EdgeInsets.only(top: 30),
+        margin: const EdgeInsets.only(top: 30),
         child: TextButton(
           onPressed: () {
             Navigator.pushNamed(context, '/home');
@@ -129,7 +131,7 @@ class ForgotPasswordPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               width: 100,
               height: 20,
             ),

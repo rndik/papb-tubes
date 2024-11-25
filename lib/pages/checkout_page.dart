@@ -5,6 +5,8 @@ import 'package:flutter_application_2/theme.dart';
 import 'package:flutter_application_2/widgets/checkout_card.dart';
 
 class CheckoutPage extends StatefulWidget {
+  const CheckoutPage({super.key});
+
   @override
   _CheckoutPageState createState() => _CheckoutPageState();
 }
@@ -30,7 +32,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
       backgroundColor: backgroundColor1,
       elevation: 0,
       centerTitle: true,
-      title: Text('Checkout Details'),
+      title: const Text('Checkout Details'),
     );
   }
 
@@ -57,7 +59,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
         // Address Detail
         Container(
           margin: EdgeInsets.only(top: defaultMargin),
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
             color: backgroundColor4,
             borderRadius: BorderRadius.circular(12),
@@ -70,7 +72,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                 style:
                     primaryTextStyle.copyWith(fontSize: 16, fontWeight: medium),
               ),
-              SizedBox(height: 12),
+              const SizedBox(height: 12),
               Row(
                 children: [
                   Column(
@@ -80,7 +82,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                       Image.asset('assets/icon_your_address.png', width: 40),
                     ],
                   ),
-                  SizedBox(width: 12),
+                  const SizedBox(width: 12),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -113,7 +115,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
         // Payment Detail
         Container(
           margin: EdgeInsets.only(top: defaultMargin),
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
             color: backgroundColor4,
             borderRadius: BorderRadius.circular(12),
@@ -126,7 +128,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                 style:
                     primaryTextStyle.copyWith(fontSize: 16, fontWeight: medium),
               ),
-              SizedBox(height: 12),
+              const SizedBox(height: 12),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -136,7 +138,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                       style: primaryTextStyle.copyWith(fontWeight: medium)),
                 ],
               ),
-              SizedBox(height: 12),
+              const SizedBox(height: 12),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -146,7 +148,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                       style: primaryTextStyle.copyWith(fontWeight: medium)),
                 ],
               ),
-              SizedBox(height: 12),
+              const SizedBox(height: 12),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -156,9 +158,9 @@ class _CheckoutPageState extends State<CheckoutPage> {
                       style: primaryTextStyle.copyWith(fontWeight: medium)),
                 ],
               ),
-              SizedBox(height: 12),
-              Divider(thickness: 1, color: Color(0xff2E3141)),
-              SizedBox(height: 10),
+              const SizedBox(height: 12),
+              const Divider(thickness: 1, color: Color(0xff2E3141)),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -174,7 +176,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
         // Upload Bukti Pembayaran
         Container(
           margin: EdgeInsets.only(top: defaultMargin),
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
             color: backgroundColor4,
             borderRadius: BorderRadius.circular(12),
@@ -187,18 +189,18 @@ class _CheckoutPageState extends State<CheckoutPage> {
                 style:
                     primaryTextStyle.copyWith(fontSize: 16, fontWeight: medium),
               ),
-              SizedBox(height: 12),
+              const SizedBox(height: 12),
               _image == null
                   ? Text(
                       'Belum ada gambar terpilih.',
                       style: secondaryTextStyle,
                     )
                   : Image.file(_image!), // Display the picked image
-              SizedBox(height: 12),
+              const SizedBox(height: 12),
               ElevatedButton.icon(
                 onPressed: _pickImage, // Upload image button
-                icon: Icon(Icons.upload),
-                label: Text('Upload Bukti Pembayaran'),
+                icon: const Icon(Icons.upload),
+                label: const Text('Upload Bukti Pembayaran'),
               ),
             ],
           ),
@@ -208,7 +210,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
         SizedBox(
           height: defaultMargin,
         ),
-        Divider(
+        const Divider(
           thickness: 1,
           color: Color(0xff2E3141),
         ),

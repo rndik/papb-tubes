@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/theme.dart';
 
 class ChatTile extends StatelessWidget {
+  const ChatTile({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -9,7 +11,7 @@ class ChatTile extends StatelessWidget {
         Navigator.pushNamed(context, '/detail-chat');
       },
       child: Container(
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           top: 33,
         ),
         child: Column(
@@ -20,7 +22,7 @@ class ChatTile extends StatelessWidget {
                   'assets/image_shop_logo.png',
                   width: 54,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 12,
                 ),
                 Expanded(
@@ -49,10 +51,10 @@ class ChatTile extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 12,
             ),
-            Divider(
+            const Divider(
               thickness: 1,
               color: Color(0xff2B2939),
             )

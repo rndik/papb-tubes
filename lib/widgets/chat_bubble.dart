@@ -7,21 +7,21 @@ class ChatBubble extends StatelessWidget {
   final bool isSender;
   final bool hasProduct;
 
-  ChatBubble({this.isSender = false, this.text = '',this.hasProduct = false});
+  const ChatBubble({super.key, this.isSender = false, this.text = '',this.hasProduct = false});
 
   @override
   Widget build(BuildContext context) {
     Widget productPreview() {
       return Container(
         width: 230,
-        margin: EdgeInsets.only(bottom: 12),
-        padding: EdgeInsets.all(12),
+        margin: const EdgeInsets.only(bottom: 12),
+        padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(isSender ? 12 : 0),
             topRight: Radius.circular(isSender ? 0 : 12),
-            bottomLeft: Radius.circular(12),
-            bottomRight: Radius.circular(12),
+            bottomLeft: const Radius.circular(12),
+            bottomRight: const Radius.circular(12),
           ),
           color: isSender ? backgroundColor5 : backgroundColor4,
         ),
@@ -36,7 +36,7 @@ class ChatBubble extends StatelessWidget {
                     width: 70,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 8,
                 ),
                 Expanded(
@@ -47,7 +47,7 @@ class ChatBubble extends StatelessWidget {
                       'COURT VISION 2.0 SHOES',
                       style: primaryTextStyle,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 4,
                     ),
                     Text(
@@ -58,7 +58,7 @@ class ChatBubble extends StatelessWidget {
                 ))
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
@@ -77,7 +77,7 @@ class ChatBubble extends StatelessWidget {
                     style: purpleTextStyle,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 8,
                 ),
                 TextButton(
@@ -104,12 +104,12 @@ class ChatBubble extends StatelessWidget {
 
     return Container(
       width: double.infinity,
-      margin: EdgeInsets.only(top: 30),
+      margin: const EdgeInsets.only(top: 30),
       child: Column(
         crossAxisAlignment:
             isSender ? CrossAxisAlignment.end : CrossAxisAlignment.start,
         children: [
-          hasProduct ? productPreview() : SizedBox(),
+          hasProduct ? productPreview() : const SizedBox(),
           Row(
             mainAxisAlignment:
                 isSender ? MainAxisAlignment.end : MainAxisAlignment.start,
@@ -119,7 +119,7 @@ class ChatBubble extends StatelessWidget {
                   constraints: BoxConstraints(
                     maxWidth: MediaQuery.of(context).size.width * 0.6,
                   ),
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     horizontal: 16,
                     vertical: 12,
                   ),
@@ -127,8 +127,8 @@ class ChatBubble extends StatelessWidget {
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(isSender ? 12 : 0),
                       topRight: Radius.circular(isSender ? 0 : 12),
-                      bottomLeft: Radius.circular(12),
-                      bottomRight: Radius.circular(12),
+                      bottomLeft: const Radius.circular(12),
+                      bottomRight: const Radius.circular(12),
                     ),
                     color: isSender ? backgroundColor5 : backgroundColor4,
                   ),

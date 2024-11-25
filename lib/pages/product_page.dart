@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/theme.dart';
 
 class ProductPage extends StatefulWidget {
+  const ProductPage({super.key});
+
   @override
   State<ProductPage> createState() => _ProductPageState();
 }
@@ -35,7 +37,7 @@ class _ProductPageState extends State<ProductPage> {
     Future<void> showSuccesDialog() async {
       return showDialog(
           context: context,
-          builder: (BuildContext context) => Container(
+          builder: (BuildContext context) => SizedBox(
                 width: MediaQuery.of(context).size.width - (2 * defaultMargin),
                 child: AlertDialog(
                   backgroundColor: backgroundColor3,
@@ -61,17 +63,17 @@ class _ProductPageState extends State<ProductPage> {
                           'assets/icon_success.png',
                           width: 100,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 12,
                         ),
                         Text(
                           'Barang berhasil ditambahkan',
                           style: primaryTextStyle,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 15,
                         ),
-                        Container(
+                        SizedBox(
                           width: 154,
                           height: 44,
                           child: TextButton(
@@ -105,9 +107,9 @@ class _ProductPageState extends State<ProductPage> {
         height: 4,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: currentIndex == index ? primaryColor : Color(0xffC4C4C4),
+          color: currentIndex == index ? primaryColor : const Color(0xffC4C4C4),
         ),
-        margin: EdgeInsets.symmetric(
+        margin: const EdgeInsets.symmetric(
           horizontal: 2,
         ),
       );
@@ -117,7 +119,7 @@ class _ProductPageState extends State<ProductPage> {
       return Container(
         width: 54,
         height: 54,
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           right: 16,
         ),
         decoration: BoxDecoration(
@@ -189,7 +191,7 @@ class _ProductPageState extends State<ProductPage> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
@@ -208,9 +210,9 @@ class _ProductPageState extends State<ProductPage> {
 
       return Container(
         width: double.infinity,
-        margin: EdgeInsets.only(top: 17),
+        margin: const EdgeInsets.only(top: 17),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+          borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
           color: backgroundColor1,
         ),
         child: Column(
@@ -253,7 +255,7 @@ class _ProductPageState extends State<ProductPage> {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             backgroundColor: secondaryColor,
-                            content: Text(
+                            content: const Text(
                               'Barang ditambahkan ke Wishlist',
                               textAlign: TextAlign.center,
                             ),
@@ -263,7 +265,7 @@ class _ProductPageState extends State<ProductPage> {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             backgroundColor: alertColor,
-                            content: Text(
+                            content: const Text(
                               'Barang dihapus dari Wishlist',
                               textAlign: TextAlign.center,
                             ),
@@ -287,7 +289,7 @@ class _ProductPageState extends State<ProductPage> {
               width: double.infinity,
               margin: EdgeInsets.only(
                   top: 20, left: defaultMargin, right: defaultMargin),
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
                 color: backgroundColor2,
                 borderRadius: BorderRadius.circular(4),
@@ -326,7 +328,7 @@ class _ProductPageState extends State<ProductPage> {
                     style: primaryTextStyle.copyWith(
                         fontWeight: bold, fontSize: 18),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 12,
                   ),
                   Text(
@@ -360,7 +362,7 @@ class _ProductPageState extends State<ProductPage> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 12,
                   ),
                   SingleChildScrollView(
@@ -389,11 +391,11 @@ class _ProductPageState extends State<ProductPage> {
                   bottom: 14),
               child: Row(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 16,
                   ),
                   Expanded(
-                    child: Container(
+                    child: SizedBox(
                       height: 54,
                       child: TextButton(
                           onPressed: () {

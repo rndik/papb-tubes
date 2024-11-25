@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/theme.dart';
 
 class EditProfilePage extends StatelessWidget {
+  const EditProfilePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     PreferredSizeWidget header() {
@@ -11,7 +13,7 @@ class EditProfilePage extends StatelessWidget {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(Icons.close,)),
+            icon: const Icon(Icons.close,)),
         backgroundColor: backgroundColor1, // Contoh properti tambahan
         title: Text(
           'Edit Profile',
@@ -35,7 +37,7 @@ class EditProfilePage extends StatelessWidget {
 
     Widget nameInput() {
       return Container(
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           top: 30
         ),
         child: Column(
@@ -66,7 +68,7 @@ class EditProfilePage extends StatelessWidget {
 
         Widget usernameInput() {
       return Container(
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           top: 30
         ),
         child: Column(
@@ -97,7 +99,7 @@ class EditProfilePage extends StatelessWidget {
 
         Widget emailInput() {
       return Container(
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           top: 30
         ),
         child: Column(
@@ -139,7 +141,7 @@ class EditProfilePage extends StatelessWidget {
               width: 100,
               height: 100,
               margin: EdgeInsets.only(top: defaultMargin),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
                   image: AssetImage('assets/image_profile.png'),

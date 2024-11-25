@@ -3,18 +3,20 @@ import 'package:flutter_application_2/theme.dart';
 import 'package:flutter_application_2/widgets/cart_card.dart';
 
 class CartPage extends StatelessWidget {
+  const CartPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     PreferredSizeWidget header() {
       return AppBar(
         backgroundColor: backgroundColor1,
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'Keranjang Anda',
         ),
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.chevron_left),
+          icon: const Icon(Icons.chevron_left),
           onPressed: () {
         Navigator.pop(context); // Ini akan mengembalikan pengguna ke halaman sebelumnya
       },
@@ -31,7 +33,7 @@ class CartPage extends StatelessWidget {
               'assets/icon__empty_cart.png',
               width: 80,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Text(
@@ -39,7 +41,7 @@ class CartPage extends StatelessWidget {
               style:
                   primaryTextStyle.copyWith(fontSize: 16, fontWeight: medium),
             ),
-            SizedBox(
+            const SizedBox(
               height: 12,
             ),
             Text(
@@ -49,7 +51,7 @@ class CartPage extends StatelessWidget {
             Container(
               width: 154,
               height: 44,
-              margin: EdgeInsets.only(top: 20),
+              margin: const EdgeInsets.only(top: 20),
               child: TextButton(
                   onPressed: () {
                     Navigator.pushNamedAndRemoveUntil(
@@ -80,7 +82,7 @@ class CartPage extends StatelessWidget {
     }
 
     Widget customBottomNav() {
-      return Container(
+      return SizedBox(
         height: 180,
         child: Column(
           children: [
@@ -103,14 +105,14 @@ class CartPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Divider(
               thickness: 0.3,
               color: subtitleColor,
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Container(
@@ -122,7 +124,7 @@ class CartPage extends StatelessWidget {
                   },
                   style: TextButton.styleFrom(
                       backgroundColor: primaryColor,
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                         horizontal: 20,
                       ),
                       shape: RoundedRectangleBorder(

@@ -7,6 +7,8 @@ import 'package:flutter_application_2/widgets/product_tile.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     AuthProvider authProvider = Provider.of<AuthProvider>(context);
@@ -42,7 +44,7 @@ class HomePage extends StatelessWidget {
     image: DecorationImage(
       image: user.profilePhotoUrl != null && user.profilePhotoUrl!.isNotEmpty
           ? NetworkImage(user.profilePhotoUrl!)
-          : AssetImage('assets/images/placeholder.png'), // Ganti dengan path placeholder Anda
+          : const AssetImage('assets/images/placeholder.png'), // Ganti dengan path placeholder Anda
       fit: BoxFit.cover, // Pastikan gambar menutupi lingkaran dengan baik
     ),
   ),
@@ -66,11 +68,11 @@ class HomePage extends StatelessWidget {
                 width: defaultMargin,
               ),
               Container(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   horizontal: 12,
                   vertical: 10,
                 ),
-                margin: EdgeInsets.only(right: 16),
+                margin: const EdgeInsets.only(right: 16),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   color: primaryColor,
@@ -84,11 +86,11 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   horizontal: 12,
                   vertical: 10,
                 ),
-                margin: EdgeInsets.only(right: 16),
+                margin: const EdgeInsets.only(right: 16),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(color: subtitleColor),
@@ -103,11 +105,11 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   horizontal: 12,
                   vertical: 10,
                 ),
-                margin: EdgeInsets.only(right: 16),
+                margin: const EdgeInsets.only(right: 16),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(color: subtitleColor),
@@ -122,11 +124,11 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   horizontal: 12,
                   vertical: 10,
                 ),
-                margin: EdgeInsets.only(right: 16),
+                margin: const EdgeInsets.only(right: 16),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(color: subtitleColor),
@@ -141,11 +143,11 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   horizontal: 12,
                   vertical: 10,
                 ),
-                margin: EdgeInsets.only(right: 16),
+                margin: const EdgeInsets.only(right: 16),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(color: subtitleColor),
@@ -178,7 +180,7 @@ class HomePage extends StatelessWidget {
 
     Widget popularProducts() {
       return Container(
-        margin: EdgeInsets.only(top: 14),
+        margin: const EdgeInsets.only(top: 14),
         child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(children: [
@@ -209,7 +211,7 @@ class HomePage extends StatelessWidget {
 
     Widget newArrivals() {
       return Container(
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           top: 14,
         ),
         child: Column(

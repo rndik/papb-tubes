@@ -3,6 +3,8 @@ import 'package:flutter_application_2/theme.dart';
 import 'package:flutter_application_2/widgets/wishlist_cart.dart';
 
 class WishlistPage extends StatelessWidget {
+  const WishlistPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     Widget header() {
@@ -33,7 +35,7 @@ class WishlistPage extends StatelessWidget {
               'assets/icon_wishlist_blue.png',
               width: 80,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Text(
@@ -41,17 +43,17 @@ class WishlistPage extends StatelessWidget {
               style:
                   primaryTextStyle.copyWith(fontSize: 16, fontWeight: medium),
             ),
-            SizedBox(
+            const SizedBox(
               height: 12,
             ),
             Text(
               'Ayo cari barang yang anda sukai',
               style: secondaryTextStyle,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Container(
+            SizedBox(
               height: 44,
               child: TextButton(
                 onPressed: () {
@@ -59,7 +61,7 @@ class WishlistPage extends StatelessWidget {
                       context, '/home', (route) => false);
                 },
                 style: TextButton.styleFrom(
-                    padding: EdgeInsets.symmetric(
+                    padding: const EdgeInsets.symmetric(
                       horizontal: 24,
                       vertical: 10,
                     ),

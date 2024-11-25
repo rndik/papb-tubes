@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/theme.dart';
 
 class CheckoutCard extends StatelessWidget {
+  const CheckoutCard({super.key});
+
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         top: 12
       ),
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         vertical: 20,
         horizontal: 12
       ),
@@ -24,14 +26,14 @@ class CheckoutCard extends StatelessWidget {
             height: 60,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
-              image: DecorationImage(
+              image: const DecorationImage(
                 image: AssetImage(
                   'assets/image_steel.png'
                   )
                 )
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 12,
           ),
           Expanded(
@@ -45,7 +47,7 @@ class CheckoutCard extends StatelessWidget {
                   ),
                   overflow: TextOverflow.ellipsis,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 2,
                 ),
                 Text(
@@ -55,7 +57,7 @@ class CheckoutCard extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 12,
           ),
           Text(

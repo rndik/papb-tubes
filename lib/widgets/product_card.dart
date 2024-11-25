@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/theme.dart';
 
 class ProductCard extends StatelessWidget {
+  const ProductCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -26,7 +28,7 @@ class ProductCard extends StatelessWidget {
               fit: BoxFit.cover,
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+              margin: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -34,7 +36,7 @@ class ProductCard extends StatelessWidget {
                     'Pipa',
                     style: secondaryTextStyle.copyWith(fontSize: 12),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 6,
                   ),
                   Text(
@@ -45,7 +47,7 @@ class ProductCard extends StatelessWidget {
                     ),
                     overflow: TextOverflow.ellipsis,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 6,
                   ),
                   Text(
