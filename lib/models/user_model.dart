@@ -5,6 +5,7 @@ class UserModel {
   String? username;
   String? profilePhotoUrl;
   String? token;
+  String? roles; // Tambahkan properti role
 
   UserModel({
     this.id,
@@ -13,19 +14,21 @@ class UserModel {
     this.username,
     this.profilePhotoUrl,
     this.token,
+    this.roles,
   });
 
-  // Named constructor to create an instance from a JSON map
-  UserModel.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    name = json['name'];
-    email = json['email'];
-    username = json['username'];
-    profilePhotoUrl = json['profile_photo_url'];
-    token = json['token'];
+  factory UserModel.fromJson(Map<String, dynamic> json) {
+    return UserModel(
+      id: json['id'],
+      name: json['name'],
+      email: json['email'],
+      username: json['username'],
+      profilePhotoUrl: json['profile_photo_url'],
+      token: json['token'],
+      roles: json['roles'], // Ambil role dari JSON
+    );
   }
 
-  // Method to convert an instance to a JSON map
   Map<String, dynamic> toJson() {
     return {
       'id': id,
@@ -34,6 +37,7 @@ class UserModel {
       'username': username,
       'profile_photo_url': profilePhotoUrl,
       'token': token,
+      'roles': roles, // Sertakan role dalam JSON
     };
   }
 }

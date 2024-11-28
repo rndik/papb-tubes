@@ -13,9 +13,7 @@ class SignInPage extends StatefulWidget {
 
 class _SignInPageState extends State<SignInPage> {
   TextEditingController emailController = TextEditingController(text: '');
-
   TextEditingController passwordController = TextEditingController(text: '');
-
   bool isLoading = false;
 
   @override
@@ -31,7 +29,11 @@ class _SignInPageState extends State<SignInPage> {
         email: emailController.text,
         password: passwordController.text,
       )) {
-        Navigator.pushNamed(context, '/home');
+        if (authProvider.isAdmin) {
+          Navigator.pushNamed(context, '/admin-home'); // Halaman Admin
+        } else {
+          Navigator.pushNamed(context, '/home'); // Halaman User
+        }
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
@@ -48,7 +50,6 @@ class _SignInPageState extends State<SignInPage> {
         isLoading = false;
       });
     }
-
 
     Widget Header() {
       return Container(
@@ -108,14 +109,15 @@ class _SignInPageState extends State<SignInPage> {
                       width: 16,
                     ),
                     Expanded(
-                        child: TextFormField(
-                      style: primaryTextStyle,
-                      controller: emailController,
-                      decoration: InputDecoration.collapsed(
-                        hintText: 'Email Address',
-                        hintStyle: subtitleTextStyle,
+                      child: TextFormField(
+                        style: primaryTextStyle,
+                        controller: emailController,
+                        decoration: InputDecoration.collapsed(
+                          hintText: 'Email Address',
+                          hintStyle: subtitleTextStyle,
+                        ),
                       ),
-                    )),
+                    ),
                   ],
                 ),
               ),
@@ -158,15 +160,16 @@ class _SignInPageState extends State<SignInPage> {
                       width: 16,
                     ),
                     Expanded(
-                        child: TextFormField(
-                      style: primaryTextStyle,
-                      obscureText: true,
-                      controller: passwordController,
-                      decoration: InputDecoration.collapsed(
-                        hintText: 'Password',
-                        hintStyle: subtitleTextStyle,
+                      child: TextFormField(
+                        style: primaryTextStyle,
+                        obscureText: true,
+                        controller: passwordController,
+                        decoration: InputDecoration.collapsed(
+                          hintText: 'Password',
+                          hintStyle: subtitleTextStyle,
+                        ),
                       ),
-                    )),
+                    ),
                   ],
                 ),
               ),

@@ -4,8 +4,8 @@ import 'package:flutter_application_2/providers/auth_provider.dart';
 import 'package:flutter_application_2/theme.dart';
 import 'package:provider/provider.dart';
 
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
+class AdminProfilePage extends StatelessWidget {
+  const AdminProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {

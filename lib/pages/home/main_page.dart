@@ -43,7 +43,6 @@ class _MainPageState extends State<MainPage> {
               currentIndex: currentIndex,
               onTap: (value) {
                 setState(() {
-                  print(value);
                   currentIndex = value;
                 });
               },
@@ -115,16 +114,16 @@ class _MainPageState extends State<MainPage> {
       switch (currentIndex) {
         case 0:
           return HomePage();
-          break;
+          
         case 1:
           return OrderPage();
-          break;
+          
         case 2:
           return WishlistPage();
-          break;
+
         case 3:
           return ProfilePage();
-          break;
+
 
         default:
           return HomePage();

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/models/user_model.dart';
 import 'package:flutter_application_2/providers/auth_provider.dart';
+import 'package:flutter_application_2/providers/product_provider.dart';
 import 'package:flutter_application_2/theme.dart';
 import 'package:flutter_application_2/widgets/product_card.dart';
 import 'package:flutter_application_2/widgets/product_tile.dart';
@@ -12,7 +13,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     AuthProvider authProvider = Provider.of<AuthProvider>(context);
-    UserModel user = authProvider.user;
+    UserModel? user = authProvider.user;
+    ProductProvider productProvider = Provider.of<ProductProvider>(context);
 
     Widget header() {
       return Container(
@@ -25,30 +27,17 @@ class HomePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Hallo, ${user.name}',
+                    'Hallo, ${user?.name}',
                     style: primaryTextStyle.copyWith(
                         fontSize: 24, fontWeight: semiBold),
                   ),
                   Text(
-                    "@${user.username}",
+                    "@${user?.username}",
                     style: subtitleTextStyle.copyWith(fontSize: 16),
                   ),
                 ],
               ),
             ),
-            Container(
-  width: 54,
-  height: 54,
-  decoration: BoxDecoration(
-    shape: BoxShape.circle,
-    image: DecorationImage(
-      image: user.profilePhotoUrl != null && user.profilePhotoUrl!.isNotEmpty
-          ? NetworkImage(user.profilePhotoUrl!)
-          : const AssetImage('assets/images/placeholder.png'), // Ganti dengan path placeholder Anda
-      fit: BoxFit.cover, // Pastikan gambar menutupi lingkaran dengan baik
-    ),
-  ),
-),
 
           ],
         ),
@@ -189,9 +178,16 @@ class HomePage extends StatelessWidget {
               ),
               Row(
                 children: [
-                  ProductCard(),
-                  ProductCard(),
-                  ProductCard(),
+              SizedBox(
+                width: defaultMargin,
+              ),
+              Row(
+                children: productProvider.products
+                    .map(
+                      (product) => ProductCard(product),
+                    )
+                    .toList(),
+              ),
                 ],
               )
             ])),
@@ -215,12 +211,11 @@ class HomePage extends StatelessWidget {
           top: 14,
         ),
         child: Column(
-          children: [
-            ProductTile(),
-            ProductTile(),
-            ProductTile(),
-            ProductTile(),
-          ],
+          children: productProvider.products              
+          .map(
+          (product) => ProductTile(product),
+          )
+          .toList(),
         ),
       );
     }

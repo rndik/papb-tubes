@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/theme.dart';
 
-class OrderPage extends StatelessWidget {
-  const OrderPage({super.key});
+class ManageTransactionsPage extends StatelessWidget {
+  const ManageTransactionsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class OrderPage extends StatelessWidget {
         backgroundColor: backgroundColor1,
         centerTitle: true,
         title: Text(
-          'Pesanan Anda',
+          'Transaksi Toko',
           style: primaryTextStyle.copyWith(
             fontSize: 18,
             fontWeight: medium,
@@ -51,7 +51,7 @@ class OrderPage extends StatelessWidget {
               height: 20,
             ),
             Text(
-              'Opss belum ada transaksi?',
+              'Masih belum ada transaksi ditoko?',
               style:
                   primaryTextStyle.copyWith(fontSize: 16, fontWeight: medium),
             ),
@@ -59,7 +59,7 @@ class OrderPage extends StatelessWidget {
               height: 12,
             ),
             Text(
-              'Anda belum pernah melakukan transaksi',
+              'Ayo kita semangat mencari pelanggan',
               style: secondaryTextStyle.copyWith(
                 fontSize: 12
               ),
@@ -67,29 +67,6 @@ class OrderPage extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            SizedBox(
-              height: 44,
-              child: TextButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/home');
-                },
-                style: TextButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 24,
-                      vertical: 10,
-                    ),
-                    backgroundColor: primaryColor,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12))),
-                child: Text(
-                  'Telusuri Toko',
-                  style: primaryTextStyle.copyWith(
-                    fontSize: 16,
-                    fontWeight: medium,
-                  ),
-                ),
-              ),
-            )
           ],
         ),
       ));

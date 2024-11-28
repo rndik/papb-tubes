@@ -1,10 +1,13 @@
-import 'dart:math';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/models/product_model.dart';
 import 'package:flutter_application_2/theme.dart';
 
 class ProductPage extends StatefulWidget {
-  const ProductPage({super.key});
+  
+  final ProductModel product;
+  ProductPage(this.product);
+  
 
   @override
   State<ProductPage> createState() => _ProductPageState();
@@ -160,7 +163,7 @@ class _ProductPageState extends State<ProductPage> {
           ),
           Container(
             child: CarouselSlider(
-              items: images
+              items: widget.product.galleries
                   .map(
                     (image) => Container(
                       margin: const EdgeInsets.symmetric(
@@ -168,8 +171,8 @@ class _ProductPageState extends State<ProductPage> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(
                             10.0), // Memberikan radius sudut
-                        child: Image.asset(
-                          image,
+                        child: Image.network(
+                          image.url,
                           width: MediaQuery.of(context).size.width *
                               0.7, // Mengatur ukuran gambar
                           height: 310,
@@ -196,7 +199,7 @@ class _ProductPageState extends State<ProductPage> {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: images.map((e) {
+            children: widget.product.galleries.map((e) {
               index++;
               return indicator(index);
             }).toList(),
@@ -230,14 +233,14 @@ class _ProductPageState extends State<ProductPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Pipa Galvanis',
+                          widget.product.name,
                           style: primaryTextStyle.copyWith(
                             fontSize: 18,
                             fontWeight: semiBold,
                           ),
                         ),
                         Text(
-                          'Pipa',
+                          widget.product.category.name,
                           style: secondaryTextStyle.copyWith(
                             fontSize: 12,
                           ),
@@ -302,7 +305,7 @@ class _ProductPageState extends State<ProductPage> {
                     style: primaryTextStyle,
                   ),
                   Text(
-                    'Rp.135.000',
+                    'Rp.${widget.product.price}',
                     style: priceTextStyle.copyWith(
                       fontSize: 17,
                       fontWeight: semiBold,
@@ -332,7 +335,7 @@ class _ProductPageState extends State<ProductPage> {
                     height: 12,
                   ),
                   Text(
-                    'Pipa Galvanis merupakan pipa yang telah dilapisi seng sehingga penggunaannya dapat di aplikasi ke rumah maupun hotel karena tergolong aman dan juga tidak mudah berkarat.',
+                    widget.product.description,
                     style: secondaryTextStyle.copyWith(
                       fontWeight: light,
                     ),
@@ -388,7 +391,7 @@ class _ProductPageState extends State<ProductPage> {
                   top: defaultMargin,
                   left: defaultMargin,
                   right: defaultMargin,
-                  bottom: 14),
+                  bottom: 80),
               child: Row(
                 children: [
                   const SizedBox(

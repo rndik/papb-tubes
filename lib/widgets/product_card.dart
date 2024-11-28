@@ -1,60 +1,81 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/models/product_model.dart';
+import 'package:flutter_application_2/pages/product_page.dart';
 import 'package:flutter_application_2/theme.dart';
 
+
 class ProductCard extends StatelessWidget {
-  const ProductCard({super.key});
+  final ProductModel product;
+  ProductCard(this.product);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, '/product');
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ProductPage(product),
+          ),
+        );
       },
       child: Container(
         width: 215,
-        height: 250,
-        margin: EdgeInsets.only(right: defaultMargin),
+        height: 278,
+        margin: EdgeInsets.only(
+          right: defaultMargin,
+        ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: backgroundColor4,
+          color: Color(0xffECEDEF),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset(
-              'assets/image_steel.png',
+            SizedBox(
+              height: 30,
+            ),
+            Image.network(
+              product.galleries[0].url,
               width: 215,
               height: 150,
               fit: BoxFit.cover,
             ),
             Container(
-              margin: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+              margin: EdgeInsets.symmetric(
+                horizontal: 20,
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Pipa',
-                    style: secondaryTextStyle.copyWith(fontSize: 12),
+                    product.category.name,
+                    style: secondaryTextStyle.copyWith(
+                      fontSize: 12,
+                    ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 6,
                   ),
                   Text(
-                    'PIPA GALVANIS',
-                    style: primaryTextStyle.copyWith(
+                    product.name,
+                    style: blackTextStyle.copyWith(
                       fontSize: 18,
                       fontWeight: semiBold,
                     ),
                     overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 6,
                   ),
                   Text(
-                    'Rp.135.000',
+                    '\$${product.price}',
                     style: priceTextStyle.copyWith(
-                        fontSize: 14, fontWeight: medium),
-                  )
+                      fontSize: 14,
+                      fontWeight: medium,
+                    ),
+                  ),
                 ],
               ),
             ),
